@@ -1,0 +1,227 @@
+#include <iostream>
+#include "mystack.h"
+using namespace std;
+int main()
+{
+    cout << "Case 1" << endl;
+    try
+    {        
+        MyStack<int> mystack; 
+
+       
+        mystack.push(1);
+        mystack.push(2);
+        mystack.push(3);
+        mystack.push(4);
+        mystack.push(5);
+        mystack.push(6);
+        mystack.push(7);        
+
+        
+        mystack.pop();
+        mystack.pop();
+        mystack.pop();
+        mystack.pop();
+        mystack.pop();
+
+		/* cout << "my stack contains: " << endl;
+        while (! mystack.empty())
+        {
+           cout << mystack.top() << " ";
+            mystack.pop();
+        }
+        cout << endl;*/
+
+        
+        cout << "My stack contains " << mystack.size() << " items" << endl;
+    }
+    catch (int a)
+    {
+        cerr << "Stack is empty" << endl;        
+    }
+
+    cout << endl;
+    cout << "Case 2" << endl;
+    try
+    {
+        MyStack<int> mystack2; 
+
+       
+        mystack2.push(1);
+        mystack2.push(2);
+        mystack2.push(3);
+
+       
+        mystack2.pop();
+        mystack2.pop();
+        mystack2.pop();
+        mystack2.pop(); 
+        mystack2.pop();
+    }
+    catch (int a)
+    {
+        cerr << "Stack is empty" << endl;
+
+    }
+	///////////////////////
+		cout << endl;
+	cout << "Stack with string type" << endl;
+	 try
+    {
+        
+        MyStack<string> mystack3;
+        mystack3.push("one");
+        mystack3.push("two");
+        mystack3.push("three");
+        mystack3.push("four");
+        mystack3.push("five");
+        mystack3.push("six");
+        mystack3.push("seven");
+        mystack3.push("eight");
+        mystack3.push("nine");
+
+        cout << "my stack contains: " << endl;
+        while (! mystack3.empty())
+        {
+            auto top = mystack3.top();
+            for (auto i = 0; i < top.size(); ++i)
+            {
+                cout << top[i];
+            }
+            cout << ' ';
+            mystack3.pop();
+        }
+        cout << endl;
+
+        mystack3.push("123");
+        mystack3.push("456");
+        mystack3.push("789");
+        mystack3.push("333");
+        mystack3.pop();
+        mystack3.push("444");
+        while (! mystack3.empty())
+        {
+            auto top = mystack3.top();
+            for (auto i = 0; i < top.size(); ++i)
+            {
+                cout << top[i];
+            }
+            cout << ' ';
+            mystack3.pop();
+        }
+        cout << endl;
+
+ 
+    // mystack.pop();
+      // mystack.pop();
+
+    }
+    catch (int a)
+    {
+        cerr << "Stack is empty" << endl;
+		system ("pause");
+        exit(1);
+    }
+	////////////////////////
+	cout << endl;
+        cout << "Stack with int type" << endl;
+	 try
+    {
+        
+        MyStack<int> mystack4;
+        mystack4.push(1);
+        mystack4.push(2);
+        mystack4.push(3);
+        mystack4.push(4);
+        mystack4.push(5);
+        mystack4.push(6);
+        mystack4.push(7);
+        mystack4.push(8);
+        mystack4.push(9);
+
+        cout << "my stack contains: " << endl;
+        while (! mystack4.empty())
+        {
+           cout << mystack4.top() << " ";
+            mystack4.pop();
+        }
+        cout << endl;
+
+        mystack4.push(0);
+        mystack4.push(7);
+        mystack4.push(6);
+        mystack4.push(3);
+        mystack4.pop();
+        mystack4.push(9);
+        while (! mystack4.empty())
+        {
+            cout << mystack4.top() << ' ';
+            mystack4.pop();
+        }
+        cout << endl;
+
+ 
+     // mystack.pop();
+      // mystack.pop();
+    }
+    catch (int a)
+    {
+        cerr << "Stack is empty" << endl;
+		system ("pause");
+        exit(1);
+    }
+
+
+
+
+	////////////////////////
+	cout << endl;
+        cout << "Stack with double type" << endl;
+	try
+    {
+      
+        MyStack<double> mystack5;
+        mystack5.push(1.24);
+        mystack5.push(2.23);
+        mystack5.push(3.36);
+        mystack5.push(4.58);
+        mystack5.push(5.74);
+        mystack5.push(6.36);
+        mystack5.push(7.24);
+        mystack5.push(8.12);
+        mystack5.push(9.99);
+
+       cout << "my stack contains: " << endl;
+        while (! mystack5.empty())
+        {
+            cout << mystack5.top() << " ";
+            mystack5.pop();
+        }
+        cout << endl;
+
+        mystack5.push(0.24);
+        mystack5.push(7.77);
+        mystack5.push(6.66);
+        mystack5.push(3.33);
+        mystack5.pop();
+        mystack5.push(9.55);
+        while (! mystack5.empty())
+        {
+            cout << mystack5.top() << " ";
+            mystack5.pop();
+        }
+        cout << endl;
+
+
+     //  mystack.pop();
+      //  mystack.pop();
+    }
+    catch (int a)
+    {
+       cerr << "Stack is empty" << endl;
+	   system ("pause");
+        exit(1);
+    }
+    system("pause");
+    return 0;
+}

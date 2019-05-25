@@ -1,0 +1,58 @@
+#ifndef MYSTACK_H
+#define MYSTACK_H
+
+#include <vector>
+
+template <class T>
+class MyStack
+{
+public:
+
+    MyStack() 
+    {}
+
+    bool empty()
+    {
+        return m_vec.empty(); 
+    }
+
+    size_t size()
+    {
+        return m_vec.size(); 
+    }
+
+    T top()
+    {
+        if (m_vec.empty())
+        {
+             
+            throw -1;  
+        }
+
+       
+        return m_vec.back();
+    }
+
+    void push(const T& item)
+    {
+        m_vec.push_back(item); 
+    }
+
+    void pop()
+    {
+        if (m_vec.empty())
+        {
+
+            throw -1;
+        }
+
+        
+        m_vec.pop_back();
+    }
+
+private:
+
+    std::vector<T> m_vec;
+};
+
+#endif // MYSTACK_H
